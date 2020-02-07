@@ -11,7 +11,7 @@
   %tbody
     - @movies.each do |movie|
       %tr
-        %a= "google.com"
+        %a= link_to "google.com"
           %td= movie.title
           %td= movie.rating
           %td= movie.release_date
