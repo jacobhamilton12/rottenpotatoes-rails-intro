@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @r = []
+    @r = [""]
     @all_ratings = Movie.ratings
     @sort = params[:sort]
     params[:ratings].nil? ? @r = @all_ratings : @r = params[:ratings].keys
