@@ -1,5 +1,4 @@
 class Movie < ActiveRecord::Base
-    def ratings
-        ["G", "PG", "PG-13", "R"]
-    end
+    @ratings = [:G, :PG, "PG-13", :R]
+    attr_accessor :ratings
 end
