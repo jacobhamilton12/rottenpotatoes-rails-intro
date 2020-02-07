@@ -4,7 +4,7 @@ class Movie < ActiveRecord::Base
     end
     
     def self.With_ratings 
-        params[:ratings].nil? ? r = ratings : r = params[:ratings].keys
+        params[:ratings].nil? ? r = self.ratings : r = params[:ratings].keys
         Movie.where(rating: r).order(@sort)
     end
 end
