@@ -5,6 +5,6 @@ class Movie < ActiveRecord::Base
     
     def self.With_ratings( allratings)
         params[:ratings].nil? ? r = allratings : r = params[:ratings].keys
-        Movie.where(rating: r).order(@sort)
+        Movie.where(rating: r)
     end
 end
