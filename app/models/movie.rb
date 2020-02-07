@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
     def self.ratings
-        enum select: :rating 
+        Movie.select(:rating).distinct.inject([]) { |m| m.rating }
     end
 end
